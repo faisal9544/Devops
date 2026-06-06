@@ -1,0 +1,23 @@
+cd C:\Users\faisa\Documents
+
+git clone https://github.com/<YOUR_USERNAME>/Devops.git
+
+cd Devops
+
+mkdir Git-Assignment-01
+
+cd Git-Assignment-01
+
+type nul > Code.txt
+type nul > Log.txt
+type nul > Output.txt
+
+cd ..
+
+git add Git-Assignment-01/Code.txt
+
+git add Git-Assignment-01/Output.txt
+
+git commit -m "Completed Git Assignment 01"
+
+git push origin main
