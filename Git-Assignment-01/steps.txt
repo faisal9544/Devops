@@ -1,0 +1,124 @@
+Create a new folder
+Put:
+Code.txt
+Log.txt
+Output.txt
+Stage only:
+Code.txt
+Output.txt
+Commit
+Push to GitHub
+
+And you want to keep this assignment inside your existing GitHub repository named "Devops" so that all your assignments are stored in one place for your CV.
+
+That's perfectly fine.
+
+Step 1: Clone Your Devops Repository (One Time Only)
+
+Open CMD:
+
+cd C:\Users\faisa\Documents
+
+Clone your GitHub repository:
+
+git clone https://github.com/<YOUR_USERNAME>/Devops.git
+
+Go inside:
+
+cd Devops
+Step 2: Create a New Folder for the Assignment
+
+The assignment says "Create a new folder".
+
+Let's create:
+
+mkdir Git-Assignment-01
+cd Git-Assignment-01
+Step 3: Create the Required Files
+type nul > Code.txt
+type nul > Log.txt
+type nul > Output.txt
+
+Verify:
+
+dir
+
+You should see:
+
+Code.txt
+Log.txt
+Output.txt
+Step 4: Check Git Status
+
+Go back to the repository root:
+
+cd ..
+
+Run:
+
+git status
+
+You will see:
+
+Untracked files:
+Git-Assignment-01/
+Step 5: Stage Only Code.txt and Output.txt
+git add Git-Assignment-01/Code.txt
+git add Git-Assignment-01/Output.txt
+
+Check:
+
+git status
+
+Expected:
+
+Changes to be committed:
+    new file: Git-Assignment-01/Code.txt
+    new file: Git-Assignment-01/Output.txt
+
+Untracked files:
+    Git-Assignment-01/Log.txt
+
+This exactly satisfies the assignment requirement.
+
+Step 6: Commit
+git commit -m "Completed Git Assignment 01"
+Step 7: Push to GitHub
+git push origin main
+Step 8: Verify on GitHub
+
+In your Devops repository, you will see:
+
+Devops
+│
+└── Git-Assignment-01
+    │
+    ├── Code.txt
+    └── Output.txt
+
+Log.txt will not be on GitHub because it was never staged or committed.
+
+Final Commands
+cd C:\Users\faisa\Documents
+
+git clone https://github.com/<YOUR_USERNAME>/Devops.git
+
+cd Devops
+
+mkdir Git-Assignment-01
+
+cd Git-Assignment-01
+
+type nul > Code.txt
+type nul > Log.txt
+type nul > Output.txt
+
+cd ..
+
+git add Git-Assignment-01/Code.txt
+
+git add Git-Assignment-01/Output.txt
+
+git commit -m "Completed Git Assignment 01"
+
+git push origin main
